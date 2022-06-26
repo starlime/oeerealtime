@@ -30,9 +30,9 @@ def dataIoT():
 # iterating key value pair
     for key ,value in data.items():
     
-        if value and '0' in value.keys():
+        if value and 'interval' in value.keys():
             # Adding value of sharpness to sum
-            sum += value['0']
+            sum += value['interval']
     #set ke rtoeecomponent
     db.child("RtOEEComponent").child("OTc").set(sum)
 
